@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Flask example</title>
+</head>
+<body>
+<h1> Flask app - SQLALCHEMY using "redirect" and "url_for"  </h1>
+<br>
+<form method="POST" action="process">
+<label>enter your name 
+<input name="name" required>
+</label>
+<br>
+<label>enter your comment
+    <textarea cols=30, rows=5 , name="comment" required></textarea>
+ </label>
+<br>
+<button value="submit" type="submit">click here</button>    
+</form> 
+{% for i in result | reverse %}
+<b><p>{{i.name}}</p></b>
+<p>{{i.comment}}</p>
+<i><p>{{i.posted.strftime('%B %d %Y %H:%M') }}</p></i>
+<hr>
+{% endfor %}
+</body>
+</html>
